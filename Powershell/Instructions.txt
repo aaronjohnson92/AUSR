@@ -1,0 +1,30 @@
+# maybe? Idk. Install-Module -Name Posh-SSH
+
+
+You need to install OpenSSH to make this work so you can go here
+
+Or you can do the following:
+
+1) Open powershell with elevated permissions.
+2) Run Get-WindowsCapability -Online | ? Name -like 'OpenSSH*'
+3) Run Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
+
+If you need to uninstall for any reason you can either
+
+1) Open Settings.
+2) Select Apps.
+3) Select Features.
+4) Select Manage Optional Features.
+5) Select OpenSSH and then uninstall it.
+
+or you can do the following:
+
+1) Open powershell with elevated permissons.
+2) Run Remove-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
+
+
+The installation info via powershell can be found here https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse
+The official site and installation media can be found
+
+
+Useage is essentially the same as linux "ssh username@x.x.x.x"
